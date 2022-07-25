@@ -1,0 +1,97 @@
+// 首页的样式 less文件
+@import "common";
+
+// @import 导入的意思  可以把一个样式文件导入到另外一个样式文件里面去
+// link是把一个样式文件引入到html页面里面去
+body {
+    min-width: 320px;
+    width: 15rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-family: Arial, Helvetica;
+    background: #F2F2F2;
+}
+
+// 顶部搜索框
+@basefont: 50;
+
+.search-content {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: (88rem / @basefont);
+    background-color: #ffc001;
+
+    .classify {
+        width: (36rem/@basefont);
+        height: (60rem/@basefont);
+        margin: (11rem/@basefont) (25rem/@basefont) (7rem/@basefont) (24rem/@basefont);
+        background: url(../images/classify.png) no-repeat;
+        // 背景缩放
+        background-size: (36rem/@basefont) (60rem/@basefont);
+    }
+
+    .search {
+        flex: 1;
+
+        input {
+            outline: none;
+            width: 100%;
+            border: 0;
+            height: (66rem/@basefont);
+            border-radius: (33rem/@basefont);
+            background-color: #fff2cc;
+            margin-top: (12rem/@basefont);
+            font-size: (25rem/@basefont);
+            padding-left: (55rem/@basefont);
+            color: #757575;
+        }
+    }
+
+    .login {
+        width: (36rem/@basefont);
+        height: (60rem/@basefont);
+        margin: (11rem/@basefont) (25rem/@basefont) (7rem/@basefont) (24rem/@basefont);
+        background: url(../images/login.png) no-repeat;
+        background-size: (36rem/@basefont) (60rem/@basefont);
+    }
+}
+
+.banner {
+    width: (750rem/@basefont);
+    // height: (229rem/@basefont);
+
+    img {
+        width: 100%;
+        vertical-align: middle;
+        overflow: hidden;
+    }
+}
+
+nav {
+    width: (750rem/@basefont);
+    height: (284rem/@basefont);
+
+    a {
+        float: left;
+        width: (150rem/@basefont);
+        height: (142rem/@basefont);
+        text-align: center;
+
+        img {
+            display: block;
+            width: (84rem/@basefont);
+            height: (84rem/@basefont);
+            margin: (10rem/@basefont) auto (-18rem/@basefont);
+        }
+
+        span {
+            font-size: (25rem/@basefont);
+            color: #333;
+            margin-bottom: 10px;
+        }
+    }
+}
